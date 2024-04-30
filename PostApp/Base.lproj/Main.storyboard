@@ -1,24 +1,109 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PostApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="tree" translatesAutoresizingMaskIntoConstraints="NO" id="Ovn-i1-1wD">
+                                <rect key="frame" x="18" y="181" width="357" height="348"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" minimumFontSize="50" translatesAutoresizingMaskIntoConstraints="NO" id="2wa-GU-Fjg">
+                                <rect key="frame" x="18" y="537" width="357" height="34"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="New">
+                                        <attributes>
+                                            <color key="NSColor" name="mainBlue"/>
+                                            <font key="NSFont" size="15" name="SFProText-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vsh-sI-Lmy">
+                                <rect key="frame" x="23" y="152" width="64.666666666666671" height="17.666666666666657"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="New post">
+                                        <attributes>
+                                            <color key="NSColor" name="mainBlue"/>
+                                            <font key="NSFont" size="15" name="SFProText-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <color key="highlightedColor" name="mainBlue"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GxR-8Z-qXQ">
+                                <rect key="frame" x="16" y="768" width="361" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Vpd-kt-T0Q"/>
+                                </constraints>
+                                <color key="tintColor" name="darkBlue"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Save/Edit">
+                                            <attributes>
+                                                <font key="NSFont" size="16" name="SFProText-Regular"/>
+                                                <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseForegroundColor" name="darkBlue"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2wa-GU-Fjg" firstAttribute="trailing" secondItem="Ovn-i1-1wD" secondAttribute="trailing" id="6te-vJ-VuV"/>
+                            <constraint firstItem="GxR-8Z-qXQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="7Ao-dD-pBn"/>
+                            <constraint firstItem="Ovn-i1-1wD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="122" id="9Ju-2E-2vP"/>
+                            <constraint firstItem="vsh-sI-Lmy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="93" id="FEz-2i-wto"/>
+                            <constraint firstItem="vsh-sI-Lmy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="23" id="Ku5-Ul-1qW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ovn-i1-1wD" secondAttribute="trailing" constant="18" id="RI2-Lp-dls"/>
+                            <constraint firstItem="Ovn-i1-1wD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="18" id="Z8c-qj-5SW"/>
+                            <constraint firstItem="GxR-8Z-qXQ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ado-bX-bo2"/>
+                            <constraint firstItem="GxR-8Z-qXQ" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="njZ-Bh-reG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="vsh-sI-Lmy" secondAttribute="trailing" symbolic="YES" id="of6-Ha-geC"/>
+                            <constraint firstItem="2wa-GU-Fjg" firstAttribute="top" secondItem="Ovn-i1-1wD" secondAttribute="bottom" constant="8" id="tgL-Ac-nkC"/>
+                            <constraint firstItem="2wa-GU-Fjg" firstAttribute="leading" secondItem="Ovn-i1-1wD" secondAttribute="leading" id="yDr-c6-XhT"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="postFoto" destination="Ovn-i1-1wD" id="aQs-0Y-kAg"/>
+                        <outlet property="saveEditButton" destination="GxR-8Z-qXQ" id="V19-Q9-V1d"/>
+                        <outlet property="textField" destination="2wa-GU-Fjg" id="DfM-dd-j2n"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="101.5267175572519" y="3.5211267605633805"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="tree" width="626" height="348"/>
+        <namedColor name="darkBlue">
+            <color red="0.027000000700354576" green="0.22699999809265137" blue="0.45899999141693115" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="mainBlue">
+            <color red="0.016000000759959221" green="0.33300000429153442" blue="0.6940000057220459" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
