@@ -13,6 +13,7 @@
 		2807BB402BDBE2E800328BB5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2807BB3E2BDBE2E800328BB5 /* Main.storyboard */; };
 		2807BB422BDBE2E900328BB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2807BB412BDBE2E900328BB5 /* Assets.xcassets */; };
 		2807BB452BDBE2E900328BB5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2807BB432BDBE2E900328BB5 /* LaunchScreen.storyboard */; };
+		28CCA8C82BEAB22E00DD9D45 /* EditViewControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CCA8C72BEAB22E00DD9D45 /* EditViewControler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		2807BB412BDBE2E900328BB5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2807BB442BDBE2E900328BB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2807BB462BDBE2E900328BB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		28CCA8C72BEAB22E00DD9D45 /* EditViewControler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewControler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				2807BB382BDBE2E800328BB5 /* AppDelegate.swift */,
 				2807BB3A2BDBE2E800328BB5 /* SceneDelegate.swift */,
 				2807BB3C2BDBE2E800328BB5 /* ViewController.swift */,
+				28CCA8C72BEAB22E00DD9D45 /* EditViewControler.swift */,
 				2807BB3E2BDBE2E800328BB5 /* Main.storyboard */,
 				2807BB412BDBE2E900328BB5 /* Assets.xcassets */,
 				2807BB432BDBE2E900328BB5 /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 				2807BB3D2BDBE2E800328BB5 /* ViewController.swift in Sources */,
 				2807BB392BDBE2E800328BB5 /* AppDelegate.swift in Sources */,
 				2807BB3B2BDBE2E800328BB5 /* SceneDelegate.swift in Sources */,
+				28CCA8C82BEAB22E00DD9D45 /* EditViewControler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

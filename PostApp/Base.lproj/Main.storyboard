@@ -12,65 +12,259 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PostApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="0" id="BYZ-38-t0r" customClass="ViewController" customModule="PostApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="tree" translatesAutoresizingMaskIntoConstraints="NO" id="Ovn-i1-1wD">
-                                <rect key="frame" x="18" y="181" width="357" height="348"/>
+                                <rect key="frame" x="18" y="134" width="357" height="348"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="348" id="7Kp-0O-MFa"/>
+                                    <constraint firstAttribute="width" constant="357" id="zVp-hK-KPM"/>
+                                </constraints>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" text="New" borderStyle="roundedRect" minimumFontSize="50" translatesAutoresizingMaskIntoConstraints="NO" id="2wa-GU-Fjg">
-                                <rect key="frame" x="18" y="537" width="357" height="34"/>
-                                <color key="textColor" name="mainBlue"/>
-                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="15"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New post" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vsh-sI-Lmy">
-                                <rect key="frame" x="23" y="152" width="68" height="17.666666666666657"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New post" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vsh-sI-Lmy" userLabel="text tietle">
+                                <rect key="frame" x="23" y="109" width="68" height="17.666666666666671"/>
                                 <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="15"/>
                                 <color key="textColor" name="mainBlue"/>
                                 <color key="highlightedColor" name="mainBlue"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GxR-8Z-qXQ">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GxR-8Z-qXQ" userLabel="Edit Button">
                                 <rect key="frame" x="16" y="768" width="361" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Vpd-kt-T0Q"/>
                                 </constraints>
                                 <color key="tintColor" name="darkBlue"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Save/Edit">
+                                <buttonConfiguration key="configuration" style="plain" title="Edit">
                                     <fontDescription key="titleFontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="16"/>
                                     <color key="baseForegroundColor" name="darkBlue"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="editButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dW8-YN-8pm"/>
+                                </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="top" text="  " borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="niJ-xd-m4E">
+                                <rect key="frame" x="18" y="581" width="357" height="177"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="357" id="7pe-ep-6JB"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="177" id="dBG-Om-QH4"/>
+                                    <constraint firstAttribute="height" constant="177" id="gph-9b-IAx"/>
+                                </constraints>
+                                <color key="textColor" name="mainBlue"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GmE-WX-KLW">
+                                <rect key="frame" x="17" y="492" width="128" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="128" id="Z7h-Cw-Vdi"/>
+                                    <constraint firstAttribute="height" constant="37" id="hDo-zh-FNh"/>
+                                </constraints>
+                                <color key="tintColor" name="darkBlue"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="&lt; Previos">
+                                    <fontDescription key="titleFontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="previousButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P2a-TE-261"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zpD-hk-rvf">
+                                <rect key="frame" x="248" y="492" width="128" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="128" id="d0T-vI-W06"/>
+                                    <constraint firstAttribute="height" constant="37" id="ncH-N6-i2k"/>
+                                </constraints>
+                                <color key="tintColor" name="darkBlue"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Next &gt;">
+                                    <fontDescription key="titleFontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="nextButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="W6Z-fN-Hqp"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FzF-nq-pOd" userLabel="Text Description">
+                                <rect key="frame" x="17" y="593" width="353" height="35"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Beautiful tree in the middle of a field covered with grass with the tree line in the background">
+                                        <attributes>
+                                            <color key="NSColor" name="mainBlue"/>
+                                            <font key="NSFont" size="15" name="ArialRoundedMTBold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="charWrapping" baseWritingDirection="natural" firstLineHeadIndent="20" headIndent="20" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5xF-BR-oe6">
+                                <rect key="frame" x="18" y="565" width="61" height="14"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="12"/>
+                                <color key="textColor" name="mainBlue"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="2wa-GU-Fjg" firstAttribute="trailing" secondItem="Ovn-i1-1wD" secondAttribute="trailing" id="6te-vJ-VuV"/>
+                            <constraint firstItem="FzF-nq-pOd" firstAttribute="leading" secondItem="GmE-WX-KLW" secondAttribute="leading" id="4iX-b1-K3c"/>
                             <constraint firstItem="GxR-8Z-qXQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="7Ao-dD-pBn"/>
-                            <constraint firstItem="Ovn-i1-1wD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="122" id="9Ju-2E-2vP"/>
-                            <constraint firstItem="vsh-sI-Lmy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="93" id="FEz-2i-wto"/>
+                            <constraint firstItem="Ovn-i1-1wD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="75" id="9Ju-2E-2vP"/>
+                            <constraint firstItem="niJ-xd-m4E" firstAttribute="top" secondItem="5xF-BR-oe6" secondAttribute="bottom" constant="2" id="AW5-JJ-hWD"/>
+                            <constraint firstItem="vsh-sI-Lmy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="FEz-2i-wto"/>
                             <constraint firstItem="vsh-sI-Lmy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="23" id="Ku5-Ul-1qW"/>
+                            <constraint firstItem="GmE-WX-KLW" firstAttribute="top" secondItem="Ovn-i1-1wD" secondAttribute="bottom" constant="10" id="LQb-ci-GV8"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ovn-i1-1wD" secondAttribute="trailing" constant="18" id="RI2-Lp-dls"/>
+                            <constraint firstItem="zpD-hk-rvf" firstAttribute="baseline" secondItem="GmE-WX-KLW" secondAttribute="baseline" id="SB5-yX-uNf"/>
+                            <constraint firstItem="zpD-hk-rvf" firstAttribute="top" secondItem="Ovn-i1-1wD" secondAttribute="bottom" constant="10" id="UKp-ZF-T4S"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FzF-nq-pOd" secondAttribute="trailing" constant="23" id="Un3-AL-PmS"/>
+                            <constraint firstItem="niJ-xd-m4E" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="18" id="Xmq-8N-4jR"/>
                             <constraint firstItem="Ovn-i1-1wD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="18" id="Z8c-qj-5SW"/>
+                            <constraint firstItem="zpD-hk-rvf" firstAttribute="top" secondItem="Ovn-i1-1wD" secondAttribute="bottom" constant="10" id="aRx-vw-9ZQ"/>
                             <constraint firstItem="GxR-8Z-qXQ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ado-bX-bo2"/>
+                            <constraint firstItem="GxR-8Z-qXQ" firstAttribute="top" secondItem="niJ-xd-m4E" secondAttribute="bottom" constant="10" id="mIT-pt-BpJ"/>
                             <constraint firstItem="GxR-8Z-qXQ" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="njZ-Bh-reG"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="vsh-sI-Lmy" secondAttribute="trailing" symbolic="YES" id="of6-Ha-geC"/>
-                            <constraint firstItem="2wa-GU-Fjg" firstAttribute="top" secondItem="Ovn-i1-1wD" secondAttribute="bottom" constant="8" id="tgL-Ac-nkC"/>
-                            <constraint firstItem="2wa-GU-Fjg" firstAttribute="leading" secondItem="Ovn-i1-1wD" secondAttribute="leading" id="yDr-c6-XhT"/>
+                            <constraint firstItem="5xF-BR-oe6" firstAttribute="leading" secondItem="niJ-xd-m4E" secondAttribute="leading" id="tdf-vH-B1v"/>
+                            <constraint firstItem="FzF-nq-pOd" firstAttribute="top" secondItem="GmE-WX-KLW" secondAttribute="bottom" constant="64" id="tmE-F8-jaq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zpD-hk-rvf" secondAttribute="trailing" constant="17" id="wmx-gQ-Hqe"/>
+                            <constraint firstItem="GmE-WX-KLW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="17" id="ydv-i3-tf8"/>
+                            <constraint firstItem="zpD-hk-rvf" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="GmE-WX-KLW" secondAttribute="trailing" constant="8" symbolic="YES" id="yeM-Fq-eIt"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Nwt-ex-YOa"/>
                     <connections>
+                        <outlet property="editButton" destination="GxR-8Z-qXQ" id="V32-vZ-p7a"/>
+                        <outlet property="nextButton" destination="zpD-hk-rvf" id="Jhh-D6-6Zz"/>
                         <outlet property="postFoto" destination="Ovn-i1-1wD" id="aQs-0Y-kAg"/>
-                        <outlet property="saveEditButton" destination="GxR-8Z-qXQ" id="V19-Q9-V1d"/>
-                        <outlet property="textField" destination="2wa-GU-Fjg" id="DfM-dd-j2n"/>
+                        <outlet property="previosButton" destination="GmE-WX-KLW" id="xDl-EY-i11"/>
+                        <outlet property="textDescription" destination="FzF-nq-pOd" id="elF-hG-WZs"/>
+                        <outlet property="textFieldDescription" destination="niJ-xd-m4E" id="rli-lK-ckM"/>
+                        <outlet property="textTitle" destination="vsh-sI-Lmy" id="1Nq-mk-DOw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="101.5267175572519" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="424" y="6"/>
+        </scene>
+        <!--Edit View Controller-->
+        <scene sceneID="BmH-I9-98n">
+            <objects>
+                <viewController storyboardIdentifier="edit" id="bOf-n6-2EI" customClass="EditViewController" customModule="PostApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="e5h-vj-iMt">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="tree" translatesAutoresizingMaskIntoConstraints="NO" id="fcV-OX-6SF">
+                                <rect key="frame" x="18" y="134" width="357" height="348"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="357" id="9pU-Iz-dUZ"/>
+                                    <constraint firstAttribute="width" constant="357" id="ODv-vw-j6p"/>
+                                    <constraint firstAttribute="height" constant="348" id="RKr-YF-9rp"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="348" id="fkL-27-eNC"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8aP-5P-hCM" userLabel="Save Button">
+                                <rect key="frame" x="18" y="768" width="175" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="175" id="A2k-RY-HeQ"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="h3h-qK-EtF"/>
+                                    <constraint firstAttribute="height" constant="50" id="nRn-ke-kqg"/>
+                                </constraints>
+                                <color key="tintColor" name="darkBlue"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Save">
+                                    <fontDescription key="titleFontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="16"/>
+                                    <color key="baseForegroundColor" name="darkBlue"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="saveButtonTapped:" destination="bOf-n6-2EI" eventType="touchUpInside" id="KfJ-oY-hRw"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="top" text="  " borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Asz-X6-URa">
+                                <rect key="frame" x="18" y="581" width="357" height="177"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="177" id="czJ-FI-eCW"/>
+                                </constraints>
+                                <color key="textColor" name="mainBlue"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xWw-6l-XKC" userLabel="Cancel Button">
+                                <rect key="frame" x="211" y="768" width="164" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="D7h-Yy-n5j"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="WIJ-pr-ug9"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="Yma-sQ-PKP"/>
+                                </constraints>
+                                <color key="tintColor" name="darkBlue"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Cancel">
+                                    <fontDescription key="titleFontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="16"/>
+                                    <color key="baseForegroundColor" name="darkBlue"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="cancelButtonTapped:" destination="bOf-n6-2EI" eventType="touchUpInside" id="xbp-vk-Vfi"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mww-Cg-IX8">
+                                <rect key="frame" x="18" y="567" width="61" height="14"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="12"/>
+                                <color key="textColor" name="mainBlue"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Glh-Aq-sDB">
+                                <rect key="frame" x="18" y="504" width="23" height="14"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="12"/>
+                                <color key="textColor" name="mainBlue"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" verticalHuggingPriority="251" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" text="New" borderStyle="roundedRect" minimumFontSize="50" translatesAutoresizingMaskIntoConstraints="NO" id="0y1-sh-EQg">
+                                <rect key="frame" x="18" y="518" width="357" height="34"/>
+                                <color key="textColor" name="mainBlue"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ixJ-9K-bUB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="mww-Cg-IX8" firstAttribute="top" secondItem="0y1-sh-EQg" secondAttribute="bottom" constant="15" id="EH6-nx-E6J"/>
+                            <constraint firstItem="0y1-sh-EQg" firstAttribute="trailing" secondItem="Asz-X6-URa" secondAttribute="trailing" id="EjC-7Q-alw"/>
+                            <constraint firstItem="Asz-X6-URa" firstAttribute="top" secondItem="mww-Cg-IX8" secondAttribute="bottom" id="HdX-eR-7Sd"/>
+                            <constraint firstItem="ixJ-9K-bUB" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="mww-Cg-IX8" secondAttribute="trailing" symbolic="YES" id="KQN-aZ-oNc"/>
+                            <constraint firstItem="ixJ-9K-bUB" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Glh-Aq-sDB" secondAttribute="trailing" symbolic="YES" id="Kxu-L3-mqz"/>
+                            <constraint firstItem="0y1-sh-EQg" firstAttribute="top" secondItem="Glh-Aq-sDB" secondAttribute="bottom" id="Nbj-v9-Smd"/>
+                            <constraint firstItem="fcV-OX-6SF" firstAttribute="leading" secondItem="ixJ-9K-bUB" secondAttribute="leading" constant="18" id="OXc-b0-Bzd"/>
+                            <constraint firstItem="0y1-sh-EQg" firstAttribute="leading" secondItem="Glh-Aq-sDB" secondAttribute="leading" id="SlZ-hc-e0v"/>
+                            <constraint firstItem="0y1-sh-EQg" firstAttribute="leading" secondItem="mww-Cg-IX8" secondAttribute="leading" id="Tbx-Sc-zeP"/>
+                            <constraint firstItem="ixJ-9K-bUB" firstAttribute="trailing" secondItem="xWw-6l-XKC" secondAttribute="trailing" constant="18" id="Vin-64-geg"/>
+                            <constraint firstItem="0y1-sh-EQg" firstAttribute="trailing" secondItem="xWw-6l-XKC" secondAttribute="trailing" id="XY0-6c-Dcv"/>
+                            <constraint firstItem="Asz-X6-URa" firstAttribute="leading" secondItem="ixJ-9K-bUB" secondAttribute="leading" constant="18" id="bhH-I8-XTk"/>
+                            <constraint firstItem="fcV-OX-6SF" firstAttribute="top" secondItem="ixJ-9K-bUB" secondAttribute="top" constant="75" id="ebg-F4-qdu"/>
+                            <constraint firstItem="0y1-sh-EQg" firstAttribute="leading" secondItem="Asz-X6-URa" secondAttribute="leading" id="fjv-mb-SdO"/>
+                            <constraint firstItem="8aP-5P-hCM" firstAttribute="top" secondItem="Asz-X6-URa" secondAttribute="bottom" constant="10" id="jYu-X5-UaL"/>
+                            <constraint firstAttribute="bottom" secondItem="0y1-sh-EQg" secondAttribute="bottom" constant="300" id="kHy-zt-LvD"/>
+                            <constraint firstItem="xWw-6l-XKC" firstAttribute="top" secondItem="Asz-X6-URa" secondAttribute="bottom" constant="10" id="sFS-sH-YSU"/>
+                            <constraint firstItem="8aP-5P-hCM" firstAttribute="leading" secondItem="ixJ-9K-bUB" secondAttribute="leading" constant="18" id="sOa-8T-OhH"/>
+                            <constraint firstItem="xWw-6l-XKC" firstAttribute="leading" secondItem="8aP-5P-hCM" secondAttribute="trailing" constant="18" id="xhS-Dr-D07"/>
+                            <constraint firstItem="ixJ-9K-bUB" firstAttribute="trailing" secondItem="fcV-OX-6SF" secondAttribute="trailing" constant="18" id="yEX-qC-fH2"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="4DX-Uy-ra6"/>
+                    <connections>
+                        <outlet property="cancelButton" destination="xWw-6l-XKC" id="Ic3-Ck-1HX"/>
+                        <outlet property="postFoto" destination="fcV-OX-6SF" id="ek9-g1-gfC"/>
+                        <outlet property="saveButton" destination="8aP-5P-hCM" id="B1F-Ee-Bvf"/>
+                        <outlet property="textFieldDescription" destination="Asz-X6-URa" id="EAA-1L-mvJ"/>
+                        <outlet property="textFieldTitle" destination="0y1-sh-EQg" id="2it-zk-FTg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="huH-yd-a5t" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1232.824427480916" y="5.6338028169014089"/>
         </scene>
     </scenes>
     <resources>
