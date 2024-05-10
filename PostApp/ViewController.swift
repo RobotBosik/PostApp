@@ -35,7 +35,7 @@ class ViewController: UIViewController {
         addPost()
         setupUI()
         updateView(with: posts[currentIndex])
-        
+        //test
     }
     
     func setupUI() {
